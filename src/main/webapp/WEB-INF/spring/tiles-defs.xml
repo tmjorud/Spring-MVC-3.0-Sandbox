@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC 
+	"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+	"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<!-- Default Main Template -->
+    <definition name=".mainTemplate" template="/WEB-INF/layouts/baseLayout.jsp">
+        <put-attribute name="title" value="Simple Tiles 2 Example" type="string" />
+        <put-attribute name="activeMainMenu" value="home" type="string" />
+        <put-attribute name="header" value="/WEB-INF/layouts/header.jsp" />
+        <put-attribute name="content" value="/WEB-INF/views/welcome.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/layouts/footer.jsp" />
+    </definition>
+    
+    <!-- LOGIN, ACCOUNT -->
+    <definition name="account/login" extends=".mainTemplate">
+		<put-attribute name="activeMainMenu" value="login" type="string" />
+		<put-attribute name="content" value="/WEB-INF/views/login.jsp" />
+	</definition>
+	
+	<definition name="account/accessDenied" extends=".mainTemplate">
+		<put-attribute name="activeMainMenu" value="login" type="string" />
+		<put-attribute name="content" value="/WEB-INF/views/account/accessDenied.jsp" />
+	</definition>
+	
+ 
+	<definition name="welcome" extends=".mainTemplate">
+		<put-attribute name="activeMainMenu" value="home" type="string" />
+		<put-attribute name="content" value="/WEB-INF/views/welcome.jsp" />
+	</definition>
+	
+	<!-- ADMIN -->
+	<definition name="admin/secure_page" extends=".mainTemplate">
+		<put-attribute name="title" value="Secure Page" type="string" />
+		<put-attribute name="activeMainMenu" value="secure_page" type="string" />
+		<put-attribute name="content" value="/WEB-INF/views/admin/secure.jsp" />
+	</definition>
+	
+	<definition name="admin/very_secure_page" extends=".mainTemplate">
+		<put-attribute name="title" value="Very Secure Page" type="string" />
+		<put-attribute name="activeMainMenu" value="very_secure_page" type="string" />
+		<put-attribute name="content" value="/WEB-INF/views/admin/verySecure.jsp" />
+	</definition>
+
+	<!-- USER -->
+	<definition name="users/list" extends=".mainTemplate">
+		<put-attribute name="title" value="User list" type="string" />
+		<put-attribute name="activeMainMenu" value="users" type="string" />
+		<put-attribute name="content" value="/WEB-INF/views/users/list.jsp" />
+    </definition>
+    
+    <definition name="users/show" extends=".mainTemplate">
+    	<put-attribute name="title" value="User show" type="string" />
+		<put-attribute name="activeMainMenu" value="users" type="string" />
+		<put-attribute name="content" value="/WEB-INF/views/users/show.jsp" />
+    </definition>
+    
+    <definition name="users/new" extends=".mainTemplate">
+ 		<put-attribute name="title" value="User new" type="string" />
+		<put-attribute name="activeMainMenu" value="join" type="string" />
+		<put-attribute name="content" value="/WEB-INF/views/users/new.jsp" />
+    </definition>
+    
+    <definition name="users/edit" extends=".mainTemplate">
+ 		<put-attribute name="title" value="User edit" type="string" />
+		<put-attribute name="activeMainMenu" value="users" type="string" />
+		<put-attribute name="content" value="/WEB-INF/views/users/update.jsp" />
+    </definition>
+	
+</tiles-definitions>

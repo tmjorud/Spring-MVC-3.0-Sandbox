@@ -1,0 +1,184 @@
+/****************************************************/
+/* RESET											*/
+/****************************************************/
+/*
+Copyright (c) 2007, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.4.0
+*/
+html{color:#000;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym {border:0;font-variant:normal;}sup {vertical-align:text-top;}sub {vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}legend{color:#000;}
+
+/****************************************************/
+/* GLOBAL STYLES									*/
+/****************************************************/
+html, body { font-family:verdana; font-size:14px; background-color:#E6E6FA; }
+a { color:#00529b; }
+a:hover { background-color:#00529b; color:#FFF; }
+p { font-size:14px; line-height:18px; color:#505050; }
+b { font-weight:bold; }
+
+/****************************************************/
+/* HEADINGS											*/
+/****************************************************/
+h1, h2, h3 { color:#505050; font-weight:bold; }
+h1 { font-size:16px; }
+h2 { font-size:14px; border-bottom:solid 1px #E0E0E0; }
+h3 { font-size:12px; }
+
+/****************************************************/
+/* IMAGES											*/
+/****************************************************/
+.image{ padding:2px; border:solid 1px #00529b; }
+
+/****************************************************/
+/* LAYOUT											*/
+/****************************************************/
+#logo { width:980px;margin:auto auto;padding:20px 0 20px 0; }
+#logInMenu { float:right; margin-bottom:10px; overflow:auto; }
+#logInMenu li { display:inline; }
+#page { width:960px; margin:0 auto 40px auto; background-color:#FFF; border:solid 1px #E0E0E0; padding:10px; }
+#menuContainer { clear:both; background-color:#505050; margin-bottom:10px; }
+#credits { margin:60px auto 0 auto; text-align:center; display:block; padding-top:10px; overflow:auto; border-top:solid 1px #E0E0E0; }
+
+/****************************************************/
+/* MENU												*/
+/****************************************************/
+ol.menu { border-top:solid 10px #505050; padding:10px; }
+ol.menu li { display:inline; }
+ol.menu li a{ padding:10px; color:#FFF; }
+ol.menu li a.active, ol.menu li a:hover { background-color:#FFF; color:#505050; }
+
+/****************************************************/
+/* TABLES											*/
+/****************************************************/
+table { border:solid 1px #00529b; }
+table td, thead th { padding: 5px 15px; }
+tbody tr:hover { background-color:#E6E6FA; }
+thead th { border-bottom:dashed 1px #00529b; color:#00529b; font-weight:bold; }
+tfoot td { font-style:italic; font-size:12px; color:#00529b; }
+
+/****************************************************/
+/* ALERT BOX (CONFIRM, ERROR & INFO					*/
+/****************************************************/
+.alert-error, 
+.alert-info, 
+.alert-confirm {
+  padding:5px 5px 5px 25px;
+  margin-bottom:10px;
+  border-style:solid;
+  border-width: 1px 1px 1px 10px;
+  background-repeat:no-repeat;
+  background-position:5px 6px;
+  overflow:auto;
+}
+.alert-error {
+  background-color: #FEDFDF;
+  border-color: #cc3333;
+  background-image:url('../images/icons/exclamation-red.png');
+}
+.alert-confirm {
+  background-color: #d7f7c4;
+  border-color: #008000;
+  background-image:url('../images/icons/tick-circle.png');
+}
+.alert-info {
+  background-color:#bde5f8;
+  border-color:#00529b;
+  background-image:url('../images/icons/information.png');
+}
+.alert-error h2, 
+.alert-info h2, 
+.alert-confirm h2 {
+  border-width:0;
+  margin:0;
+  padding:0;
+}
+.alert-error p, 
+.alert-info p, 
+.alert-confirm p {
+  font-size:12px;
+}
+.alert-error h2 { color:#cc3333; }
+.alert-confirm h2 { color:#008000; }
+.alert-info h2 { color:#00529b; }
+
+.close_alert_link {
+  cursor:pointer;
+  text-decoration:underline;
+  color:#00529b;
+  margin-top:10px;
+  float:right;
+}
+.alert-error ol li {
+	font-style:italic;
+	font-size:14px;
+}
+
+
+/****************************************************/
+/* FORMS											*/
+/****************************************************/
+.focus { background-color:#FFFFCC; }
+.formContainer {
+  background-color:#F8F8F8;
+  padding:15px 5px;
+  border:solid 1px #E0E0E0;
+}
+.formContainer ol { 
+  clear:both;
+  margin-bottom:10px;
+  overflow:auto;
+}
+.formContainer ol li {
+  float:left;
+}
+.formContainer ol li span.error {
+  padding:5px;
+  float:left;
+  clear:left;
+  font-style:italic;
+  color:#cc3333;
+}
+.formContainer ol li label {
+  width:100px;
+  text-align: right;
+  margin-right:10px;
+  padding:5px 0;
+  float:left;
+  font-weight:bold;
+  color:#505050;
+}
+input[type=text], 
+input[type=password], 
+input[type=file], 
+select {
+  border:solid 1px #A0A0A0;
+  padding:5px;
+}
+input[type=text].input-error, 
+input[type=password].input-error,
+select.input-error
+{
+  border-color:#cc3333; 
+}
+input[type=text], 
+input[type=password] {
+  width:200px;
+}
+input[type=checkbox], input[type=radio]{ margin:7px 5px 5px 0; }
+.formContainer ol li input[type=radio]{
+  margin-right:5px;
+  padding:0;
+}
+.formContainer .submit-container {
+  border-style:solid;
+  border-width:1px 0 0 0;
+  border-color:#E0E0E0;
+  padding-top:15px;
+}
+input[type=submit]{
+  padding: 2px 10px;
+  margin-left:110px;
+  cursor:pointer;
+}
